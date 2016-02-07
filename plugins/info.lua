@@ -36,11 +36,11 @@ local function action_by_reply(extra, success, result)
       who = 'Sudo'
     end
   end
-  local text = '1-Full name : '..(result.from.first_name or '')..' '..(result.from.last_name or '')..'\n'
-             ..'2-First name : '..(result.from.first_name or '')..'\n'
-             ..'3-Last name : '..(result.from.last_name or '')..'\n'
-             ..'4-Username : '..user_name..'\n'
-             ..'5-ID : '..result.from.id..'\n'
+  local text = '1-نام کامل : '..(result.from.first_name or '')..' '..(result.from.last_name or '')..'\n'
+             ..'2-نام  : '..(result.from.first_name or '')..'\n'
+             ..'3-فامیل : '..(result.from.last_name or '')..'\n'
+             ..'4-یوزرنیم : '..user_name..'\n'
+             ..'5-آیدی : '..result.from.id..'\n'
              ..msgs..'\n'
              ..'7-Position in group : '..who
   send_large_msg(extra.receiver, text)
