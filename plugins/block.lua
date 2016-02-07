@@ -26,7 +26,7 @@ end
  
 return {
   patterns = {
-    "^!block (user) (%d+)$",
+    "^[Bb]lock (user) (%d+)$",
   },
   run = run,
  -- https://github.com/SEEDTEAM/TeleSeed --
