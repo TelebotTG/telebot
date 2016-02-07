@@ -3,9 +3,9 @@ local function callbackres(extra, success, result) -- Callback for res_user in l
   local user = 'user#id'..result.id
 	local chat = 'chat#id'..extra.chatid
 	if is_banned(result.id, extra.chatid) then -- Ignore bans
-            send_large_msg(chat, 'User is banned.')
+            send_large_msg(chat, 'کاربر از این گروه بن شده است.')
 	elseif is_gbanned(result.id) then -- Ignore globall bans
-	    send_large_msg(chat, 'User is globaly banned.')
+	    send_large_msg(chat, 'کاربر از همه ی گروه ها بن شده است')
 	else    
 	    chat_add_user(chat, user, ok_cb, false) -- Add user on chat
 	end
@@ -33,7 +33,7 @@ function run(msg, matches)
 end
 return {
     patterns = {
-      "^[!/]invite (.*)$"
+      "^[Ii]nvite (.*)$"
     },
     run = run
 }
